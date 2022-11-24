@@ -20,4 +20,5 @@ test("unsuccessful authorizationt", async ({page}) => {
     await page.getByTestId ('login-submit-btn').click();
     const errorMessage = await page.locator('[data-testid="login-error-hint"]');
     await page.locator('[data-testid="profile-personal-info-avatar-popup"]');
+    expect(errorMessage).toBeVisible
 });
